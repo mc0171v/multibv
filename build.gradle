@@ -1,6 +1,5 @@
 apply plugin: 'build-version'
 
-version = buildVersion.version
 
 buildscript {
     repositories {
@@ -56,4 +55,6 @@ allprojects {
         mavenCentral()
         jcenter()
     }
+
+    version = buildVersion.version
 }
