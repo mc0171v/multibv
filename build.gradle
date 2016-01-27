@@ -45,6 +45,11 @@ task(snapSubs) << {
   }
 }
 
+task(printVersion) << {
+  println "bv = $buildVersion.version"
+  println "is = $buildVersion.isRelease"
+}
+
 //clean.dependsOn updateSubs
 //clean.finalizedBy snapSubs
 
@@ -57,4 +62,5 @@ allprojects {
     }
 
     version = buildVersion.version
+    clean.dependsOn printVersion
 }
