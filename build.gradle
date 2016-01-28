@@ -50,8 +50,6 @@ task(printVersion) << {
   println "is = $buildVersion.isRelease"
 }
 
-//clean.dependsOn updateSubs
-//clean.finalizedBy snapSubs
 
 allprojects {
     apply plugin: 'java'
@@ -62,5 +60,10 @@ allprojects {
     }
 
     version = buildVersion.version
+    buildVersion {
+        integrationVersion = true
+    }
+    //clean.dependsOn updateSubs
+    //clean.finalizedBy snapSubs
     clean.dependsOn printVersion
 }
