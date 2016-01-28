@@ -61,7 +61,7 @@ allprojects {
 
     version = buildVersion.version
     buildVersion {
-        integrationVersion = true
+        integrationVersion = false
     }
     //clean.dependsOn updateSubs
     //clean.finalizedBy snapSubs
